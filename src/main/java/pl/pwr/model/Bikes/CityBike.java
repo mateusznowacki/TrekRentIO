@@ -1,19 +1,16 @@
 package pl.pwr.model.Bikes;
 
-public class CityBike {
+import pl.pwr.model.Condition;
+
+public class CityBike extends Bike {
     private boolean hasBasket;
     private boolean hasMudguards;
     private boolean isStepThroughFrame;
     private boolean hasKickstand;
 
-    public CityBike(boolean hasBasket, boolean hasMudguards, boolean isStepThroughFrame, boolean hasKickstand) {
-        this.hasBasket = hasBasket;
-        this.hasMudguards = hasMudguards;
-        this.isStepThroughFrame = isStepThroughFrame;
-        this.hasKickstand = hasKickstand;
-    }
 
     public CityBike() {
+        super();
     }
 
     public boolean isHasBasket() {

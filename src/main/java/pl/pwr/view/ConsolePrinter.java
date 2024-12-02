@@ -6,19 +6,23 @@ public class ConsolePrinter {
         System.out.println("=== Formularz dodawania nowego sprzętu ===");
     }
 
-    public void printEquipmentName() {
+    public void printGetEquipmentName() {
         System.out.print("Wprowadź nazwę sprzętu: ");
+
+
+    }  public void printGetBikeType() {
+        System.out.print("Wprowadź typ roweru: CITY, MOUNTAIN, ROAD, ELECTRIC");
     }
 
-    public void printEquipmentDescription() {
+    public void printGetEquipmentDescription() {
         System.out.print("Wprowadź opis sprzętu: ");
     }
 
-    public void printAvailableQuantity() {
+    public void printgetAvailableQuantity() {
         System.out.print("Wprowadź dostępną ilość sprzętu: ");
     }
 
-    public void printDailyPrice() {
+    public void printGetDailyPrice() {
         System.out.print("Wprowadź cenę za dobę: ");
     }
 
@@ -40,5 +44,22 @@ public class ConsolePrinter {
 
     public void printReturnToManagementPanel() {
         System.out.println("Powrót do panelu zarządzania sprzętem.");
+    }
+
+    public void printWelcomeMessage() {
+        System.out.println("Witaj w systemie wypożyczalni sprzętu sportowego!");
+        System.out.println("Wybierz jedną z poniższych opcji:");
+        System.out.println("1. Zarządzanie sprzętem");
+        System.out.println("2. Wypożycz sprzęt");
+        System.out.println("3. Zarządzanie wypożyczeniami");
+        System.out.println("4. Wyjście");
+    }
+
+    public void printEquipmentManageMenu() {
+        System.out.println("Wybierz jedną z poniższych opcji:");
+        System.out.println("1. Dodaj nowy sprzęt");
+        System.out.println("2. Edytuj sprzęt");
+        System.out.println("3. Usuń sprzęt");
+        System.out.println("4. Powrót");
     }
 }

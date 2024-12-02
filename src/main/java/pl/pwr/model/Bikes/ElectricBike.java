@@ -12,16 +12,10 @@ public class ElectricBike  extends Bike {
 
     }
 
-    public ElectricBike(int id, double price, String name, String description, boolean isAvailable, Condition condition,
-                        double batteryCapacity, int motorPower, double range, boolean hasThrottle) {
-        super(id, price, name, description, isAvailable, condition);
-        this.batteryCapacity = batteryCapacity;
-        this.motorPower = motorPower;
-        this.range = range;
-        this.hasThrottle = hasThrottle;
-    }
+
 
     public ElectricBike(double batteryCapacity, int motorPower, double range, boolean hasThrottle) {
+        super();
         this.batteryCapacity = batteryCapacity;
         this.motorPower = motorPower;
         this.range = range;

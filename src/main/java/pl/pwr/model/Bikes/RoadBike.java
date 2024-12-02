@@ -9,21 +9,7 @@ public class RoadBike extends Bike {
     private double tireWidth;
     private boolean hasIntegratedBrakes;
 
-    public RoadBike(int id, double price, String name, String description, boolean isAvailable, Condition condition,
-                    boolean isAeroFrame, double handlebarWidth, double tireWidth, boolean hasIntegratedBrakes) {
-        super(id, price, name, description, isAvailable, condition);
-        this.isAeroFrame = isAeroFrame;
-        this.handlebarWidth = handlebarWidth;
-        this.tireWidth = tireWidth;
-        this.hasIntegratedBrakes = hasIntegratedBrakes;
-    }
 
-    public RoadBike(boolean isAeroFrame, double handlebarWidth, double tireWidth, boolean hasIntegratedBrakes) {
-        this.isAeroFrame = isAeroFrame;
-        this.handlebarWidth = handlebarWidth;
-        this.tireWidth = tireWidth;
-        this.hasIntegratedBrakes = hasIntegratedBrakes;
-    }
 
     public boolean isAeroFrame() {
         return isAeroFrame;

@@ -1,5 +1,7 @@
 package pl.pwr.view;
 
+import pl.pwr.model.Bikes.BikeType;
+
 import java.util.Scanner;
 
 public class UserInputHandler {
@@ -11,16 +13,16 @@ public class UserInputHandler {
     }
 
     // Pobierz ciąg znaków
-    public String getString(String prompt) {
-        System.out.print(prompt + ": ");
+    public String getString() {
+
         return scanner.nextLine().trim();
     }
 
     // Pobierz liczbę całkowitą z walidacją
-    public int getInt(String prompt) {
+    public int getInt( ) {
         while (true) {
             try {
-                System.out.print(prompt + ": ");
+
                 return Integer.parseInt(scanner.nextLine().trim());
             } catch (NumberFormatException e) {
                 System.out.println("Nieprawidłowa liczba całkowita. Spróbuj ponownie.");
@@ -29,10 +31,10 @@ public class UserInputHandler {
     }
 
     // Pobierz liczbę zmiennoprzecinkową z walidacją
-    public double getDouble(String prompt) {
+    public double getDouble( ) {
         while (true) {
             try {
-                System.out.print(prompt + ": ");
+
                 return Double.parseDouble(scanner.nextLine().trim());
             } catch (NumberFormatException e) {
                 System.out.println("Nieprawidłowa liczba. Spróbuj ponownie.");
@@ -41,9 +43,9 @@ public class UserInputHandler {
     }
 
     // Pobierz wartość logiczną (tak/nie)
-    public boolean getBoolean(String prompt) {
+    public boolean getBoolean( ) {
         while (true) {
-            System.out.print(prompt + " (tak/nie): ");
+
             String input = scanner.nextLine().trim().toLowerCase();
             if (input.equals("tak")) {
                 return true;
@@ -72,7 +74,7 @@ public class UserInputHandler {
     // Pobierz liczbę z określonego zakresu
     public int getIntInRange(String prompt, int min, int max) {
         while (true) {
-            int value = getInt(prompt);
+            int value = getInt();
             if (value >= min && value <= max) {
                 return value;
             }
@@ -83,5 +85,16 @@ public class UserInputHandler {
     // Zamknij skaner
     public void close() {
         scanner.close();
+    }
+
+    public BikeType getBikeType() {
+        while (true) {
+            String input = scanner.nextLine().trim().toUpperCase();
+            try {
+                return BikeType.valueOf(input);
+            } catch (IllegalArgumentException e) {
+                System.out.println("Nieprawidłowy typ roweru.");
+            }
+        }
     }
 }

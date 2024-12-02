@@ -9,15 +9,7 @@ public abstract class Bike {
     private String description;
     private boolean isAvailable;
     private Condition condition;
-
-    public Bike(int id, double price, String name, String description, boolean isAvailable, Condition condition) {
-        this.id = id;
-        this.price = price;
-        this.name = name;
-        this.description = description;
-        this.isAvailable = isAvailable;
-        this.condition = condition;
-    }
+    private BikeType bikeType;
 
     public Bike() {
 
